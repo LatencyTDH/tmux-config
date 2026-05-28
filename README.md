@@ -6,6 +6,7 @@
 - **Window navigation** — `Shift+Left/Right` to cycle windows
 - **Pane navigation** — `Ctrl+h/j/k/l` to move between panes (no prefix needed)
 - **Mouse support** — click to switch panes
+- **macOS clipboard integration** — copy-mode selections and mouse drag copies go to the system clipboard via `pbcopy`
 - **Active pane highlight** — blue border + `▶` indicator on the active pane
 - **Session persistence** — sessions survive reboots via `tmux-resurrect` + `tmux-continuum` (auto-saves every 15 min)
 
