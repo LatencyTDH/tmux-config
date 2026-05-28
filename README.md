@@ -6,7 +6,7 @@
 - **Window navigation** — `Shift+Left/Right` to cycle windows
 - **Pane navigation** — `Ctrl+h/j/k/l` to move between panes (no prefix needed)
 - **Mouse support** — click to switch panes
-- **macOS clipboard integration** — copy-mode selections and mouse drag copies go to the system clipboard via `pbcopy`
+- **Cross-platform clipboard integration** — copy-mode selections and mouse drag copies use `pbcopy` (macOS), `wl-copy`/`xclip`/`xsel` (Linux), or `clip.exe` (WSL)
 - **Active pane highlight** — blue border + `▶` indicator on the active pane
 - **Session persistence** — sessions survive reboots via `tmux-resurrect` + `tmux-continuum` (auto-saves every 15 min)
 
@@ -46,5 +46,14 @@ ln -s ~/tmux-config/.tmux.conf ~/.tmux.conf
 Start tmux, then press `prefix + I` (capital i) to fetch plugins.
 
 > Default prefix is `Ctrl+b`
+
+### Clipboard helper notes
+
+- **macOS** — no extra setup; `pbcopy` is built in
+- **Linux (Wayland)** — install `wl-copy` via `wl-clipboard`
+- **Linux (X11)** — install either `xclip` or `xsel`
+- **WSL** — no extra setup if `clip.exe` is available in `PATH`
+
+If none of those clipboard helpers are installed, copy-mode still fills tmux's paste buffer, but it will not reach the system clipboard.
 
 That's it — session restore will kick in automatically on next launch.
