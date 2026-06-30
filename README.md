@@ -5,6 +5,7 @@
 - **Login shell** — `.zprofile` is sourced in every pane
 - **Window navigation** — `Shift+Left/Right` to cycle windows
 - **Pane navigation** — `Ctrl+h/j/k/l` to move between panes (no prefix needed)
+- **Synchronized panes toggle** — `prefix + y` to send the same input to every pane in the current window
 - **Mouse support** — click to switch panes
 - **Cross-platform clipboard integration** — copy-mode selections and mouse drag copies use `pbcopy` (macOS), `wl-copy`/`xclip`/`xsel` (Linux), or `clip.exe` (WSL)
 - **Active pane highlight** — blue border + `▶` indicator on the active pane
